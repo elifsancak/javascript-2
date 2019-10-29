@@ -132,7 +132,11 @@ try {
 
     const obj = {
       array: [3],
-      mergeArrays: function (arrToMerge) { }
+      mergeArrays: function (arrToMerge) {
+        return [...this.array, ...arrToMerge]
+        // another way 
+        // return this.array.concat(arrToMerge);
+       }
     }
 
 
@@ -161,12 +165,16 @@ try {
 
     // refactor this function into a method
     function mergeArrays(arr1, arr2) {
+     
       return [...arr1, ...arr2];
     }
 
     const obj = {
       array: [3],
-      mergeArrays: function (arrToMerge) { }
+      mergeArrays: function (arrToMerge) { 
+        return [...this.array, ...arrToMerge]
+        //return this.array.concat(arrToMerge);
+      }
     }
 
     obj.mergeArrays([2]);
