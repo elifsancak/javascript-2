@@ -94,6 +94,7 @@ try {
 
     reference1 = null;
     reference2 = null;
+    
 
     // never to come back again
     // this is the only way to truly delete an array
@@ -102,8 +103,9 @@ try {
 
 
   function passTheAssertions1() {
-    ; // declare and assign a1
-    ; // declare and assign a2
+    a1 = passTheAssertions1.a2;
+    a2 = a1; // declare and assign a1
+     // declare and assign a2
     console.assert(a1 === a2, 'a1 should strictly equal a2');
 
     ; // declare and assign b1

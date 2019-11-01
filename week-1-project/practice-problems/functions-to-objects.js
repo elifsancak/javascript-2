@@ -172,7 +172,7 @@ try {
     const obj = {
       array: [3],
       mergeArrays: function (arrToMerge) { 
-        return [...this.array, ...arrToMerge]
+        
         //return this.array.concat(arrToMerge);
       }
     }
@@ -200,7 +200,9 @@ try {
 
     const obj = {
       mixer: '',
-      remix: function (str) { }
+      remix: function (str) { 
+        
+      }
     };
 
     console.assert(obj.remix('hello') === 'hello', 'assert 1');
