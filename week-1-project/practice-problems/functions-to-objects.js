@@ -174,6 +174,7 @@ try {
       mergeArrays: function (arrToMerge) { 
         
         //return this.array.concat(arrToMerge);
+        this.array = [...this.array, ...arrToMerge];
       }
     }
 

@@ -170,6 +170,9 @@ try {
   ];
   function replaceItem(arr, index, newItem) {
     // write me!
+    const arrCopy = arr.concat(); //[...arr];
+    arrCopy[index] = newItem;
+    return arrCopy;
   }
   replaceItem.display = true;
   evaluate(replaceItem, replaceItemTests);
@@ -205,9 +208,33 @@ try {
     { name: 'case 5', args: [repeatItemsArray1, 0], expected: [[], [], []] },
     { name: 'case 6', args: [['p', null], 2], expected: [['p', 'p'], [null, null]] },
   ];
-  function repeatItems(items, numRepeats) {
-    // write me!
-  }
+ 
+    function fillWithRepeats(item, numRepeats) {
+      //const numRepeats = 2;
+      const arr1 = []
+      for (let i = 0; i < numRepeats; i++) {
+        arr1.push(item);
+      }
+      const filled = arr1;
+      // what do you return 
+     return filled;
+    }
+    // const filled = arr1.fill(1, 0, numRepeats)
+    // --> [1,1]
+    
+    
+    function repeatItems(items, numRepeats) {
+        let result = items.map(e => { 
+          let arr1=[];
+          let filled = fillWithRepeats(e, numRepeats);
+          return filled;
+          });
+        return result;
+        // write me!
+      }
+      
+    const repeated = repeatItems([1,2], 2);
+
   repeatItems.display = true;
   evaluate(repeatItems, repeatItemsTests);
 

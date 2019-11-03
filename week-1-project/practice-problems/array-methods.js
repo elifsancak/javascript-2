@@ -21,6 +21,7 @@ try {
   ];
   function concatArrays(arr1, arr2) {
     // write me!
+    return arr1.concat(arr2);
   }
   concatArrays.display = true;
   evaluate(concatArrays, concatArraysTests);
@@ -41,6 +42,7 @@ try {
     { name: 'thirteenth', args: [null], expected: null },
   ];
   function isNaNyString(arg) {
+    
     // write me!
     // can you write this in one line? (isNaN will be helpful)
   }
@@ -118,6 +120,9 @@ try {
   function sumAllNumberys(arr) {
     // write me!
     // early return condition: array contains no numbery strings
+
+   //let nonNannyString = arr.filter(item)
+
   };
   sumAllNumberys.display = true;
   evaluate(sumAllNumberys, sumAllNumberysTests);
