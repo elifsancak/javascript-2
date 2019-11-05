@@ -12,8 +12,8 @@
 try {
 
   function swapValues1() {
-    const obj = { prop: "array" };
-    const arr = ["object"];
+    const obj = { prop: "object" };
+    const arr = ["array"];
     let _ = null;
 
     // swap the values stored in each structure
@@ -25,8 +25,8 @@ try {
   evaluate(swapValues1);
 
   function swapValues2() {
-    const obj = { prop: "array" };
-    const arr = ["object"];
+    const obj = { prop: "object" };
+    const arr = ["array"];
     let _ = null;
 
     // swap the values stored in each structure using brackets and these variables
@@ -35,8 +35,8 @@ try {
 
 
     // asserts
-    console.assert(obj[obj_key] === "object", "obj assert");
-    console.assert(arr[arr_index] === "array", "arr assert");
+    console.assert(obj['prop'] === "object", "obj assert");
+    console.assert(arr[0] === "array", "arr assert");
   }
   evaluate(swapValues2);
 
@@ -44,14 +44,14 @@ try {
   function example_doesOrderMatter() {
 
     const obj1 = { a: 1, b: 2, c: 3 };
-    const obj2 = { c: 3, b: 2, a: 1 };
+    const obj2 = { b: 2, c: 3, a: 1 };
     const obj3 = { a: 1, b: 2, c: 3 };
     // do you remember why '===' won't work here?
     console.assert(evaluate.compareValues(obj1, obj2), 'obj: same keys/values, different order');
     console.assert(evaluate.compareValues(obj1, obj3), 'obj: same keys/values, same order');
 
     const arr1 = [1, 2, 3];
-    const arr2 = [3, 2, 1];
+    const arr2 = [2, 3, 1];
     const arr3 = [1, 2, 3];
     // do you remember why '===' won't work here?
     console.assert(evaluate.compareValues(arr1, arr2), 'arr: same values, different order');

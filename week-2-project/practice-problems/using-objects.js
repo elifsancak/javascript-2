@@ -11,13 +11,13 @@ try {
   function readFromObject1() {
 
     const obj = {
-      a: 0,
-      getA: function () { },
+      a: 0, 
+      getA: function (a) { },
       sumAB: function (b) { },
     };
-
-    console.assert(obj.getA() === 0, '1: obj.getA() should return 0');
-    console.assert(obj.sumAB(1) === 1, '1: obj.sumAB(1) should return 1');
+    obj.a = 0; 
+    console.assert(obj.getA() === 0, '1: obj.getA() should return 0'); 
+    console.assert(obj.sumAB(1) === 1, '1: obj.sumAB(1) should return 1'); 
 
     obj.a = 4;
     console.assert(obj.getA() === 4, '2: obj.getA() should return 4');

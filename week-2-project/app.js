@@ -15,7 +15,19 @@ const object = {
   },
   hasKey: function (obj, key) {
     // write me!
+    //obj.hasKey("a") ;
+   // console.log(hasKey({a: "3"}, "a"));
+  // return object ? hasOwnProperty.call(object, key) : false;
+   return obj === 3 && hasOwnProperty.call(obj, key);
   },
+  //console.log(hasKey({a: 3}, "a"));
+   
+   
+   //return obj === 3 && hasOwnProperty.call(obj, key);
+   // return obj === 3 && hasOwnProperty.call(obj, key);
+    
+ // },
+  
   hasValue: function (obj, value) {
     // write me!
   },

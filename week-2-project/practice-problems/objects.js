@@ -129,19 +129,19 @@ try {
     console.assert(a1.x === 'hi!', 'a1.x should strictly equal "hi!"');
 
     b1.x = 'bye!'; // write two lines to pass the assertions
-    ;
+    b2.x = 'bye!'; 
     console.assert(b1.x === b2.x, 'b1.x should strictly equal b2.x');
     console.assert(b1.x === 'bye!', 'b1.x should strictly equal "bye!"');
 
     // --
     const index = 'y';
 
-    ; // write one line to pass the assertions
+    a2[index]= 'roof!'; // write one line to pass the assertions
     console.assert(a1[index] === a2[index], 'a1[index] should strictly equal a2[index]');
     console.assert(a1[index] === 'roof!', 'a1[index] should strictly equal "roof!"');
 
-    ; // write two lines to pass the assertions
-    ;
+    b1[index] = 'floor!'; // write two lines to pass the assertions
+    b2[index] = 'floor!';
     console.assert(b1[index] === b2[index], 'b1[index] should strictly equal b2[index]');
     console.assert(b1[index] === 'floor!', 'b1[index] should strictly equal "floor!"');
 
@@ -154,16 +154,16 @@ try {
     const value1 = 5;
     let reference1 = {};
 
-    ; // write this line
+    value2 = 5; // write this line
     console.assert(value2 === value1, "value1 should strictly equal value2");
 
-    ; // write this line
+    reference1 = reference2 = {}; // write this line
     console.assert(reference2 === reference1, "reference1 should strictly equal reference2");
 
     value2 = value2 + 1; // write this line
     console.assert(value1 !== null, "value1 should strictly equal ___");
 
-    ; // write this line
+    reference2.x = 'hi!'; // write this line
     console.assert(reference1.x === reference2.x, "references.x should be strictly equal");
     console.assert(reference1.x === 'hi!', "references.x should strictly equal 'hi!'");
 
