@@ -200,7 +200,7 @@ try {
     console.assert(obj3 === obj2, 'obj3 should strictly equal obj2');
     console.assert(obj3[index] === obj1.x, 'obj3[index] should strictly equal obj1.x');
 
-    [index] = 'z'; // write this line
+    index = 'z'; // write this line
     console.assert(obj3.z === obj2[index], 'obj3.z should strictly equal obj2[index]');
   }
   evaluate(passTheAssertions3);

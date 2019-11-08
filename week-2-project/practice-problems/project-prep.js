@@ -22,6 +22,11 @@ try {
   ];
   function isPrimitive(thing) {
     // write me!
+    if (Object(thing) !== thing) {
+      return true
+    };
+    return false; 
+    
   }
   isPrimitive.display = true;
   evaluate(isPrimitive, isPrimitiveTests);
@@ -38,6 +43,12 @@ try {
   ];
   function hasKey(obj, key) {
     // write me!
+    if (obj.hasOwnProperty(key)){
+      return true;
+      }
+      else 
+      return false;
+    
   }
   hasKey.display = true;
   evaluate(hasKey, hasKeyTests);
@@ -55,6 +66,7 @@ try {
   function hasValue(obj, value) {
     // write me!
     // consider using Object.keys, .filter and obj.hasOwnProperty
+    return (Object.values(obj).indexOf(value) > -1);
   }
   hasValue.display = true;
   evaluate(hasValue, hasValueTests);
@@ -120,6 +132,7 @@ try {
   function findByValue(obj, value) {
     // write me!
     // (remember to avoid side effects)
+    
   }
   findByValue.display = true;
   evaluate(findByValue, findByValueTests)
