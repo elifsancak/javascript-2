@@ -1,32 +1,63 @@
-/*
-  many of the exercises have focused on avoiding side effects
-  this project is the opposite, you want to modify object.entries
-  otherwise how can it save anything!
-
-  You can even think of this week's object as a mini data base
-  - there's a store of data in object.entries
-  - and users can access & modify that data
-*/
-
 const object = {
   entries: {},
   isPrimitive: function (value) {
     // write me!
+   // if (typeof value !== this.isPrimitive) {
+    //  return true;
+  //  }
+   //else (typeof value === this.isPrimitive)
+    // return false;
+    //return !isNaN(value);
+  if (Object(value) !== value) {
+    return true
+  };
+  return false; 
   },
+  
+  
   hasKey: function (obj, key) {
     // write me!
     //obj.hasKey("a") ;
    // console.log(hasKey({a: "3"}, "a"));
   // return object ? hasOwnProperty.call(object, key) : false;
-   return obj === 3 && hasOwnProperty.call(obj, key);
-  },
+  //const obj = {a:3};
+  //obj.a = 3;
+  var obj = {
+    a: 3,
+    x:4
+};
+   if (obj.hasOwnProperty("a")){
+  return (obj.hasOwnProperty({ a: 3 }, "a"));
+ }
+ 
+  if (obj.hasOwnProperty("x")){
+  return (obj.hasOwnProperty({ x: 4 }, "y"));
+  }
+   //const obj = { a, b, x, y}
+   //a = obj;
+   //a.b = 3;
+   //console.log ('a' in obj);
+   //console.log ('x' in obj);
+
+  // if (a.hasOwnProperty('a')){
+   //  return true;
+   //}
+   //else if (a.hasOwnProperty('b'))
+   //return false;
+   //if (a.hasOwnProperty('a')){
+   //return true;
+   //}
+   //else if(a.hasOwnProperty('b'));
+   //return false;
+
+  //},
   //console.log(hasKey({a: 3}, "a"));
    
    
    //return obj === 3 && hasOwnProperty.call(obj, key);
-   // return obj === 3 && hasOwnProperty.call(obj, key);
+   //return obj === 3 && hasOwnProperty.call(obj, key);
     
- // },
+ },
   
   hasValue: function (obj, value) {
     // write me!
