@@ -1,5 +1,6 @@
 // https://medium.com/@naveenkarippai/learning-how-references-work-in-javascript-a066a4e15600
 // https://www.youtube.com/watch?v=Z_ozyN5MyWY&list=PLzV58Zm8FuBJFfQN5il3ujx6FDAY8Ds3u&index=5
+// http://javascript.info/object
 
 {
   const pageTitle = 'objects';
@@ -114,12 +115,21 @@ try {
 
 
   function passTheAssertions1() {
+<<<<<<< HEAD
      const a1 = {};// declare and assign a1
      const a2 = a1;// declare and assign a2
     console.assert(a1 === a2, 'a1 should strictly equal a2');
 
      const b1 = {};// declare and assign b1
      const b2 = {};// declare and assign b2
+=======
+    const a1 = {}; // declare and assign a1
+    const a2 = a1; // declare and assign a2
+    console.assert(a1 === a2, 'a1 should strictly equal a2');
+
+    const b1 = {}; // declare and assign b1
+    const b2 = {}; // declare and assign b2
+>>>>>>> e8dd2760382752acce1b0a0a6fccff6087b18294
     console.assert(b1 !== b2, 'b1 should not strictly equal b2');
 
     // ---
@@ -129,7 +139,11 @@ try {
     console.assert(a1.x === 'hi!', 'a1.x should strictly equal "hi!"');
 
     b1.x = 'bye!'; // write two lines to pass the assertions
+<<<<<<< HEAD
     b2.x = b1.x; 
+=======
+    b2.x = 'bye!';
+>>>>>>> e8dd2760382752acce1b0a0a6fccff6087b18294
     console.assert(b1.x === b2.x, 'b1.x should strictly equal b2.x');
     console.assert(b1.x === 'bye!', 'b1.x should strictly equal "bye!"');
 

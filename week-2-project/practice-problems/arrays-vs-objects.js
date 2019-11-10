@@ -35,8 +35,8 @@ try {
 
 
     // asserts
-    console.assert(obj['prop'] === "object", "obj assert");
-    console.assert(arr[0] === "array", "arr assert");
+    console.assert(obj[objKey] === "object", "obj assert");
+    console.assert(arr[arrIndex] === "array", "arr assert");
   }
   evaluate(swapValues2);
 

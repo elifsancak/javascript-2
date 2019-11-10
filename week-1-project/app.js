@@ -193,6 +193,7 @@ sumOfNaNy: function () {
     
   },
   sumOfNumbery: function () {
+<<<<<<< HEAD
     // write me!
     if (this.NaNyStrings.length !== 0 && this.numberyStrings.length === 0){
     return 0;
@@ -206,6 +207,9 @@ sumOfNaNy: function () {
       //  return array;
      // }
    // }
+=======
+    // write me! (using a Array.prototype.reduce())
+>>>>>>> e8dd2760382752acce1b0a0a6fccff6087b18294
   },
  
   sumOfNaNy: function () {

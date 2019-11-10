@@ -1,3 +1,16 @@
+/*
+  many of the exercises have focused on avoiding side effects
+  this project is the opposite, you want to modify object.entries
+  otherwise how can it save anything!
+
+  You can even think of this week's object as a mini data base
+  - there's a store of data in object.entries
+  - and users can access & modify that data
+*/
+
+
+
+
 const object = {
   entries: {},
   isPrimitive: function (value) {
@@ -57,9 +70,11 @@ const object = {
       return new TypeError('removeEntry: key should be a string');
     }
     if (null) { // write me! (using this.hasKey)
-      return { [key]: new ReferenceError(`removeEntry: no property "${key}" in this.entries`) };
+      return new ReferenceError(`removeEntry: no property "${key}" in this.entries`);
     }
 
+    delete this.entries[key]
+    return true
     // write me!
   },
   updateEntry: function (key, value) {
@@ -70,7 +85,7 @@ const object = {
       return new TypeError('updateEntry: value should be a primitive');
     }
     if (null) { // write me! (using this.hasKey)
-      return { [key]: new ReferenceError(`updateEntry: no property "${key}" in this.entries`) };
+      return new ReferenceError(`updateEntry: no property "${key}" in this.entries`);
     }
 
     // write me!
@@ -83,7 +98,7 @@ const object = {
       return new TypeError('findByKey: key should be a string');
     }
     if (null) { // write me! (using this.hasKey)
-      return { [key]: new ReferenceError(`findByKey: no property "${key}" in this.entries`) };
+      return new ReferenceError(`findByKey: no property "${key}" in this.entries`);
     }
 
     // write me!
