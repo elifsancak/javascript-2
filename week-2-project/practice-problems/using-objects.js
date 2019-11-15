@@ -12,8 +12,12 @@ try {
 
     const obj = {
       a: 0, 
-      getA: function (a) { },
-      sumAB: function (b) { },
+      getA: function () { 
+        return (this.a);
+      },
+      sumAB: function (b) { 
+       return (this.a + b);
+      },
     };
     obj.a = 0; 
     console.assert(obj.getA() === 0, '1: obj.getA() should return 0'); 
@@ -36,8 +40,12 @@ try {
 
     const obj = {
       word: '',
-      getWord: function () { },
-      concat: function (secondHalf) { },
+      getWord: function () { 
+        return obj;
+      },
+      concat: function (secondHalf) { 
+        return (this.obj + this.word);
+      },
     };
 
     console.assert(obj.getWord() === 'the word is ', `1: obj.getWord() should return 'the word is '`);

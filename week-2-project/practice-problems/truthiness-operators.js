@@ -1,4 +1,4 @@
-// https://github.com/janke-learning/truthiness/blob/master/operators-of-truthiness.md
+ // https://github.com/janke-learning/truthiness/blob/master/operators-of-truthiness.md
 
 
 {

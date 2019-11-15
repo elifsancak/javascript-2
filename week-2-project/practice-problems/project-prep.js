@@ -49,6 +49,7 @@ try {
       else 
       return false;
     
+      //return(obj.hasOwnProperty(key));
   }
   hasKey.display = true;
   evaluate(hasKey, hasKeyTests);

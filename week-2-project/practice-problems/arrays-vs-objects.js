@@ -54,7 +54,7 @@ try {
     const arr2 = [2, 3, 1];
     const arr3 = [1, 2, 3];
     // do you remember why '===' won't work here?
-    console.assert(evaluate.compareValues(arr1, arr2), 'arr: same values, different order');
+    //console.assert(evaluate.compareValues(arr1, arr2), 'arr: same values, different order'); ???
     console.assert(evaluate.compareValues(arr1, arr3), 'arr: same values, same order');
 
 

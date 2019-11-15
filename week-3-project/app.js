@@ -65,6 +65,7 @@ const object = {
   hasValue: function (obj, value) {
     // write me!
     if (Object.values(obj).includes(value)){
+      //return (Object.values(obj).indexOf(value) > -1);
         return true;
     }
     return false;
