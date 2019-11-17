@@ -13,10 +13,11 @@ const object = {
   },
   get currentEntry() {
     // write me!
+    return { [this.currentKey] : this.entries[this.currentKey]};
   },
   likedKeys: [],
   get likedEntries() {
-
+   
     // write me!
   },
   likeEntry: function (key) {

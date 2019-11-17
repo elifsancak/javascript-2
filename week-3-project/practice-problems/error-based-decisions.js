@@ -61,10 +61,16 @@ try {
   ]
   function exercise2(arg) {
     const result = mightReturnAnError(arg);
-
+    if (result instanceof Error) { // write this condition
+      return result.message;
+    }
+      else{
+        return arg;
+      }
+    }
     // write me!
 
-  }
+  
   exercise2.display = true;
   evaluate(exercise2, exercise2Tests);
 
@@ -83,10 +89,14 @@ try {
   ]
   function exercise3(arg) {
     const result = mightReturnAnError(arg);
-
+    if (result instanceof Error) { // write this condition
+      const resultObject = {[typeof arg] : result.message};
+      return resultObject;
+    } else { return {[typeof arg] : arg};}
+    }
     // write me!
 
-  }
+  
   exercise3.display = true;
   evaluate(exercise3, exercise3Tests);
 
